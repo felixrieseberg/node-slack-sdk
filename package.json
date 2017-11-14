@@ -1,12 +1,12 @@
 {
-  "name": "@slack/client",
+  "name": "@felixrieseberg/slack-client",
   "version": "3.14.1",
   "description": "A library for creating a Slack client",
   "main": "./index",
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "mocha": "mocha --recursive --reporter spec test",
-    "test": "npm run mocha && npm run lint",
+    "test": "npm run mocha",
     "cover": "istanbul cover -x **/facets/*.js  --report lcovonly _mocha -- --recursive",
     "codecov": "npm run cover && codecov",
     "make-slack-client-symlink": "mkdir -p $PWD/node_modules/@slack/client && ln -s $PWD/index.js $PWD/node_modules/@slack/client/index.js",
@@ -17,9 +17,9 @@
   ],
   "author": "Slack Technologies, Inc.",
   "license": "MIT",
-  "repository": "slackapi/node-slack-sdk",
+  "repository": "felixrieseberg/node-slack-sdk",
   "bugs": {
-    "url": "https://github.com/slackapi/node-slack-sdk/issues"
+    "url": "https://github.com/felixrieseberg/node-slack-sdk/issues"
   },
   "dependencies": {
     "async": "^1.5.0",
@@ -33,7 +33,7 @@
     "retry": "^0.9.0",
     "url-join": "0.0.1",
     "winston": "^2.1.1",
-    "ws": "^1.0.1"
+    "ws": "^3.3.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -48,7 +48,7 @@
     "sinon": "^1.17.1"
   },
   "engines": {
-    "node": ">= 0.12.x",
-    "npm": ">= 1.1.x"
+    "node": ">= 8.0.0",
+    "npm": ">= 4.0.0"
   }
 }
