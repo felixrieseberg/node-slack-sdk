@@ -3,7 +3,7 @@ var helpers = require('../lib/helpers');
 var os = require('os');
 var pkginfo = require('pkginfo')(module, 'version', 'name'); // eslint-disable-line no-unused-vars
 
-var userAgent = module.exports.name.replace('/', ':') + '/' + module.exports.version
+var userAgent = '@slack:client' + '/' + module.exports.version
   + ' ' + os.platform() + '/' + os.release()
   + ' node/' + process.version.replace('v', '');
 
